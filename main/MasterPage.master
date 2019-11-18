@@ -1,0 +1,121 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="main_MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    
+    <link href="../StyleSheet.css" rel="stylesheet" />
+        <script >
+            var allImages = ["girl-waiting-for-train-alone-facebook-cover.jpg", "SP5.jpg", "maharaja-express-1024x438.jpg", ];
+            var imgno = 0;
+            function moveSlide() {
+                var im = document.getElementById("imgslide");
+                im.src = "../images/banner/" + allImages[imgno];
+                imgno++;
+                if (imgno == allImages.length)
+                    imgno = 0;
+                window.setTimeout("moveSlide()", 2000);
+            }
+     </script>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+            background-color :black;
+        }
+    </style>
+</head>
+<body onload="moveSlide()" >
+    <form id="form1" runat="server">
+  
+         <div id="box">
+      
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+         <div style="background-color:#4d4d4d;" >
+         
+   <img id="imgslide" width="100%" height="200px" />
+         </div> 
+        </asp:ContentPlaceHolder>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+       
+            
+               </asp:ContentPlaceHolder>
+          
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+            <div style="width:100%;height:50px;background-color :#ccff66; font-family :Gabriola;font-size :25px;">
+                <marquee> 
+                    Train passengers can now sleep soundly without worrying about missing their station as the railways has launched a new service which will
+                     ensure that they get a “wake-up call”
+                     on their mobile phones half-an-hour before the scheduled arrival at their destination.
+                </marquee>
+            </div>
+        </asp:ContentPlaceHolder>
+             
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+            <div style="width:100%;height:40px;background-color :#ffcc66; font-family :Verdana ;font-size :15px;" >
+                <marquee direction="right">
+                    अगर आप रेलवे रिजर्वेशन करवाना चाहते हैं तो अब आपको लाइन में लगने की जरूरत नहीं है। इंटरनेट पर रिजर्वेशन की सुविधा तो पहले से ही थी, 
+                    हाल ही में खबर आई कि अब आप अपने मोबाइल के जरिए बेहद आसानी से अपना टिकट बुक करवा सकते हैं। बस आपके मोबाइल में इंटरनेट होना चाहिए। 
+                </marquee>
+            </div>
+        </asp:ContentPlaceHolder>
+        <div style="width:100%;height:80px;color:lightgreen;background-color:dimgray;font-family:Gabriola ;font-size :40px;text-align :center; ">
+        <b><i> Demo Charge Rs.</i></b>   
+        </div>
+        <div style="width:100%;height:40px;color:black  ;background-color:aquamarine;font-family:Gabriola ;font-size :20px;text-align :center;">
+           instal the team viewer first
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder5" runat="server">
+<div>
+
+            <table class="auto-style1">
+                <tr>
+                    <td class="img"><img src="../images/irctc-tatkal-find-trains4-1.jpg"  alt="tatkal image" class="img"/></td>
+                    <td class="img">&nbsp;</td>
+                    <td class="img"> &nbsp;</td>
+                    <td class="img">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="background-color :#ffcc99;font-size :20px;text-align :center ;" >NEO 4 PNR 3200/-</td>
+                    <td style="background-color :#ffcc99;font-size :20px;text-align :center ;">COUNTER 4 PNR 2200/-</td>
+                    <td style="background-color :#ffcc99;font-size :20px;text-align :center ;">REDMIRCHI 4 PNR 2300/-</td>
+                    <td style="background-color :#ffcc99;font-size :20px;text-align :center ;">CHINA 4 PNR 2500/-</td>
+                </tr>
+            </table>
+
+        </div>
+        </asp:ContentPlaceHolder>
+        <div style="background-color :black ;font-size :40px;text-align :center;color:yellow;font-family :Gabriola ;">
+            TODAY'S BOOKING.......
+        </div>
+        
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder6" runat="server">
+<div>
+
+            <table class="auto-style1">
+                <tr>
+                    <td class="img">&nbsp;</td>
+                    <td class="img">&nbsp;</td>
+                    <td class="img"> &nbsp;</td>
+                    <td class="img">&nbsp;</td>
+                </tr>
+                           </table>
+
+        </div>
+        </asp:ContentPlaceHolder>
+        <div style="width:100%;height:40px;color:black  ;background-color:aquamarine;font-family:Gabriola ;font-size :20px;">
+            <marquee direction="left">
+                    अगर आप रेलवे रिजर्वेशन करवाना चाहते हैं तो अब आपको लाइन में लगने की जरूरत नहीं है। इंटरनेट पर रिजर्वेशन की सुविधा तो पहले से ही थी, 
+                    हाल ही में खबर आई कि अब आप अपने मोबाइल के जरिए बेहद आसानी से अपना टिकट बुक करवा सकते हैं। बस आपके मोबाइल में इंटरनेट होना चाहिए। 
+                </marquee>
+        </div>
+             <div style="height:400px;width:100%;border:1px solid black;color:black;background-color :white;">
+                 this is the ticket counter.
+            </div>
+
+        </div>
+    </form>
+</body>
+</html>

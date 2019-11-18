@@ -1,0 +1,20 @@
+﻿body {
+    background-color :white;
+}
+#box {
+    width: 1100px;
+    margin-left: 120px;
+        padding:5px;
+      border :1px solid black;
+
+}
+.img 
+{
+    height:200px;
+    width:275px;
+    border-radius :5px;
+    border:2px solid white;
+}
+.tviewer {
+    height:400px;width:100%;border:1px solid black;color:black;background-color :white;
+}
